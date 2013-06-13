@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 	has_many :blabs
 
 	def first_name
-		self.name.split(' ')[0]
+		self.name.splat(' ')[0]
 	end
 
 end

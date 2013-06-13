@@ -1,12 +1,12 @@
 class BlabsController < ApplicationController
 
-	before_filter :authorize 
-	
+	before_filter :authorize
+
   # GET /blabs
   # GET /blabs.json
   def index
 		@search = Blab.search(params[:q])
-		@blabs = @search.result
+		@blobs = @search.result
 
     respond_to do |format|
       format.html # index.html.erb
